@@ -1,0 +1,12 @@
+
+/* Class = "UIButton"; configuration.title = "Tạo MK"; ObjectID = "0OI-ds-O0H"; */
+"0OI-ds-O0H.configuration.title" = "Tạo MK";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "0OI-ds-O0H"; */
+"0OI-ds-O0H.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Fb, Ig, Zola..."; ObjectID = "5yE-8Z-yLg"; */
+"5yE-8Z-yLg.placeholder" = "Fb, Ig, Zola...";
+
+/* Class = "UILabel"; text = "Tên áp"; ObjectID = "tr4-dg-U4u"; */
+"tr4-dg-U4u.text" = "Tên áp";
