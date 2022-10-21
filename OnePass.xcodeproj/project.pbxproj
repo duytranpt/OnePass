@@ -37,6 +37,11 @@
 		3AE4BD76290141BD000C67CD /* BottomStackItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE4BD75290141BD000C67CD /* BottomStackItem.swift */; };
 		3AE4BD782901422E000C67CD /* StackItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE4BD772901422E000C67CD /* StackItemView.swift */; };
 		3AE4BD7A290145DF000C67CD /* StackItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AE4BD79290145DF000C67CD /* StackItemView.xib */; };
+		3AEE5FB4290237D000F04BA3 /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEE5FB3290237D000F04BA3 /* TabbarView.swift */; };
+		3AEE5FB729027DB700F04BA3 /* Navbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEE5FB629027DB700F04BA3 /* Navbar.swift */; };
+		3AEE5FBA29027FA700F04BA3 /* DashedLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEE5FB929027FA700F04BA3 /* DashedLineView.swift */; };
+		3AEE5FBD2902814A00F04BA3 /* BaseVew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEE5FBC2902814A00F04BA3 /* BaseVew.swift */; };
+		3AEE5FC02902830700F04BA3 /* Navbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AEE5FBF2902830700F04BA3 /* Navbar.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +80,11 @@
 		3AE4BD75290141BD000C67CD /* BottomStackItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomStackItem.swift; sourceTree = "<group>"; };
 		3AE4BD772901422E000C67CD /* StackItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackItemView.swift; sourceTree = "<group>"; };
 		3AE4BD79290145DF000C67CD /* StackItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StackItemView.xib; sourceTree = "<group>"; };
+		3AEE5FB3290237D000F04BA3 /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
+		3AEE5FB629027DB700F04BA3 /* Navbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navbar.swift; sourceTree = "<group>"; };
+		3AEE5FB929027FA700F04BA3 /* DashedLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashedLineView.swift; sourceTree = "<group>"; };
+		3AEE5FBC2902814A00F04BA3 /* BaseVew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVew.swift; sourceTree = "<group>"; };
+		3AEE5FBF2902830700F04BA3 /* Navbar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Navbar.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +184,7 @@
 		3AE4BD3F29006283000C67CD /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				3AEE5FBB2902813E00F04BA3 /* BaseView */,
 				3AE4BD412900629D000C67CD /* CustomView */,
 				3AE4BD4029006295000C67CD /* Scenes */,
 			);
@@ -191,6 +202,8 @@
 		3AE4BD412900629D000C67CD /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				3AEE5FB829027F9E00F04BA3 /* DashedLineView */,
+				3AEE5FB529027D2300F04BA3 /* Navbar */,
 				3AE4BD74290141B3000C67CD /* Tabbar */,
 				3AE4BD6D2900ED6C000C67CD /* NavigationMenu */,
 				3AE4BD4929006D1B000C67CD /* OPPopupVC */,
@@ -258,8 +271,34 @@
 				3AE4BD75290141BD000C67CD /* BottomStackItem.swift */,
 				3AE4BD772901422E000C67CD /* StackItemView.swift */,
 				3AE4BD79290145DF000C67CD /* StackItemView.xib */,
+				3AEE5FB3290237D000F04BA3 /* TabbarView.swift */,
 			);
 			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		3AEE5FB529027D2300F04BA3 /* Navbar */ = {
+			isa = PBXGroup;
+			children = (
+				3AEE5FBF2902830700F04BA3 /* Navbar.xib */,
+				3AEE5FB629027DB700F04BA3 /* Navbar.swift */,
+			);
+			path = Navbar;
+			sourceTree = "<group>";
+		};
+		3AEE5FB829027F9E00F04BA3 /* DashedLineView */ = {
+			isa = PBXGroup;
+			children = (
+				3AEE5FB929027FA700F04BA3 /* DashedLineView.swift */,
+			);
+			path = DashedLineView;
+			sourceTree = "<group>";
+		};
+		3AEE5FBB2902813E00F04BA3 /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				3AEE5FBC2902814A00F04BA3 /* BaseVew.swift */,
+			);
+			path = BaseView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,6 +369,7 @@
 				3AE4BD4529006441000C67CD /* HomeIC.xcassets in Resources */,
 				3AE4BD0028FFFCC9000C67CD /* Assets.xcassets in Resources */,
 				3AE4BD2D29005474000C67CD /* SF-Pro-Display-RegularItalic.otf in Resources */,
+				3AEE5FC02902830700F04BA3 /* Navbar.xib in Resources */,
 				3AE4BCFE28FFFCC8000C67CD /* Main.storyboard in Resources */,
 				3AE4BD69290083D3000C67CD /* Localizable.strings in Resources */,
 				3AE4BD3229005474000C67CD /* SF-Pro-Display-Regular.otf in Resources */,
@@ -348,6 +388,7 @@
 				3AE4BD3829005527000C67CD /* OPFonts.swift in Sources */,
 				3AE4BD0D29003124000C67CD /* OPButton.swift in Sources */,
 				3AE4BD6F2900EDA9000C67CD /* TabItem.swift in Sources */,
+				3AEE5FB729027DB700F04BA3 /* Navbar.swift in Sources */,
 				3AE4BD4D29006F06000C67CD /* OPPopupVC.swift in Sources */,
 				3AE4BD0F290031ED000C67CD /* Color+.swift in Sources */,
 				3AE4BD47290065E1000C67CD /* HomeVC.swift in Sources */,
@@ -357,10 +398,13 @@
 				3AE4BD3B29006168000C67CD /* UIView+.swift in Sources */,
 				3AE4BD712900EE7C000C67CD /* TabNavigationMenu.swift in Sources */,
 				3AE4BD4F2900727D000C67CD /* String+.swift in Sources */,
+				3AEE5FB4290237D000F04BA3 /* TabbarView.swift in Sources */,
 				3AE4BD1129003272000C67CD /* Button+.swift in Sources */,
 				3AE4BCF728FFFCC8000C67CD /* AppDelegate.swift in Sources */,
 				3AE4BD782901422E000C67CD /* StackItemView.swift in Sources */,
+				3AEE5FBD2902814A00F04BA3 /* BaseVew.swift in Sources */,
 				3AE4BCF928FFFCC8000C67CD /* SceneDelegate.swift in Sources */,
+				3AEE5FBA29027FA700F04BA3 /* DashedLineView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

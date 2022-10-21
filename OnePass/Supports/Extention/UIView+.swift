@@ -158,4 +158,16 @@ extension UIView {
         }
     }
     
+   
+    func fixInView(_ superView: UIView) {
+        self.translatesAutoresizingMaskIntoConstraints = false
+        superView.addSubview(self)
+        self.leadingAnchor.constraint(equalTo: superView.leadingAnchor).isActive = true
+        self.bottomAnchor.constraint(equalTo: superView.bottomAnchor).isActive = true
+        self.trailingAnchor.constraint(equalTo: superView.trailingAnchor).isActive = true
+        self.topAnchor.constraint(equalTo: superView.topAnchor).isActive = true
+        self.heightAnchor.constraint(equalToConstant: NavbarHeight().navbarHeight).isActive = true
+    }
+    
+    
 }

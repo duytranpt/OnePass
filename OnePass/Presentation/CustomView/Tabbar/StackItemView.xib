@@ -49,7 +49,7 @@
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="AhE-KG-zCn" secondAttribute="bottom" constant="10" id="Cfa-Zq-DNb"/>
                         <constraint firstAttribute="trailing" secondItem="AhE-KG-zCn" secondAttribute="trailing" id="HAf-VJ-XBm"/>
@@ -58,7 +58,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="Ht0-m5-zh1" secondAttribute="bottom" id="Mbb-wg-88I"/>
                 <constraint firstItem="Ht0-m5-zh1" firstAttribute="leading" secondItem="fWc-KJ-HpY" secondAttribute="leading" id="Qge-Gx-JkM"/>

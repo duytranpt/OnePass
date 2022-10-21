@@ -16,7 +16,7 @@ class OPPopupVC: UIViewController {
     }
 
     @IBAction func backAction(_ sender: Any) {
-        self.navigationController?.dismiss(animated: true)
+        print("here")
     }
     
 }

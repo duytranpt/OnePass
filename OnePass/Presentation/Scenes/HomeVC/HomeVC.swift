@@ -9,9 +9,8 @@ import UIKit
 
 class HomeVC: UIViewController {
     
-    @IBOutlet weak var tabbarView: UIView!
+    @IBOutlet weak var tabbarView: TabbarView!
     @IBOutlet weak var bottomStack: UIStackView!
-    @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var mainView: UIView!
     
@@ -19,7 +18,7 @@ class HomeVC: UIViewController {
     
     lazy var tabs: [StackItemView] = {
         var items = [StackItemView]()
-        for _ in 0..<4 {
+        for _ in 0..<3 {
             items.append(StackItemView.newInstance)
         }
         return items
@@ -27,7 +26,8 @@ class HomeVC: UIViewController {
     
     lazy var tabModels: [BottomStackItem] = {
         return [
-            BottomStackItem(title: "Home", image: "home"),            BottomStackItem(title: "Search", image: "search"),
+            BottomStackItem(title: "Home", image: "home"),
+            BottomStackItem(title: "Like", image: "heart"),
             BottomStackItem(title: "Profile", image: "user")
         ]
     }()
@@ -37,9 +37,9 @@ class HomeVC: UIViewController {
         
         contentView.roundCorners(radius: 20, corners: .allCorners)
         mainView.roundCorners(radius: 20, corners: [.bottomLeft, .bottomRight])
-        tabbarView.vCornerRadius = tabbarView.frame.height/2
+        
         self.setupTabs()
-        //        titleLbl.text = "One Password"
+                
     }
     
     func setupTabs() {
@@ -55,6 +55,14 @@ class HomeVC: UIViewController {
     @IBAction func addAction(_ sender: Any) {
         let stb = UIStoryboard(name: "OPPopupVC", bundle: Bundle.main)
         let vc = stb.instantiateViewController(withIdentifier: "OPPopupVC") as! OPPopupVC
+        if #available(iOS 15.0, *) {
+            if let sheet = vc.sheetPresentationController {
+                sheet.detents = [.medium(), .large()]
+                sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+                sheet.preferredCornerRadius = 20
+            }
+        }
+        
         self.navigationController?.present(vc, animated: true)
     }
 }
