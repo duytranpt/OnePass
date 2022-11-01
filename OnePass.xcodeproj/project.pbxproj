@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A549E0629092A14008C2B69 /* OPLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A549E0529092A14008C2B69 /* OPLabel.swift */; };
+		3A549E0829093ADF008C2B69 /* UIGestureRecognizer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A549E0729093ADF008C2B69 /* UIGestureRecognizer+.swift */; };
 		3AE4BCF728FFFCC8000C67CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE4BCF628FFFCC8000C67CD /* AppDelegate.swift */; };
 		3AE4BCF928FFFCC8000C67CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE4BCF828FFFCC8000C67CD /* SceneDelegate.swift */; };
 		3AE4BCFB28FFFCC8000C67CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE4BCFA28FFFCC8000C67CD /* ViewController.swift */; };
@@ -31,9 +33,6 @@
 		3AE4BD4F2900727D000C67CD /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE4BD4E2900727D000C67CD /* String+.swift */; };
 		3AE4BD6029007DBA000C67CD /* HomeVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AE4BD6229007DBA000C67CD /* HomeVC.storyboard */; };
 		3AE4BD69290083D3000C67CD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3AE4BD68290083D3000C67CD /* Localizable.strings */; };
-		3AE4BD6F2900EDA9000C67CD /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE4BD6E2900EDA9000C67CD /* TabItem.swift */; };
-		3AE4BD712900EE7C000C67CD /* TabNavigationMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE4BD702900EE7C000C67CD /* TabNavigationMenu.swift */; };
-		3AE4BD732900EEA5000C67CD /* NavigationMenuBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE4BD722900EEA5000C67CD /* NavigationMenuBaseController.swift */; };
 		3AE4BD76290141BD000C67CD /* BottomStackItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE4BD75290141BD000C67CD /* BottomStackItem.swift */; };
 		3AE4BD782901422E000C67CD /* StackItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE4BD772901422E000C67CD /* StackItemView.swift */; };
 		3AE4BD7A290145DF000C67CD /* StackItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AE4BD79290145DF000C67CD /* StackItemView.xib */; };
@@ -42,9 +41,12 @@
 		3AEE5FBA29027FA700F04BA3 /* DashedLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEE5FB929027FA700F04BA3 /* DashedLineView.swift */; };
 		3AEE5FBD2902814A00F04BA3 /* BaseVew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEE5FBC2902814A00F04BA3 /* BaseVew.swift */; };
 		3AEE5FC02902830700F04BA3 /* Navbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AEE5FBF2902830700F04BA3 /* Navbar.xib */; };
+		3AEE5FC329029B3A00F04BA3 /* NewTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEE5FC129029B3A00F04BA3 /* NewTabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A549E0529092A14008C2B69 /* OPLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPLabel.swift; sourceTree = "<group>"; };
+		3A549E0729093ADF008C2B69 /* UIGestureRecognizer+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIGestureRecognizer+.swift"; sourceTree = "<group>"; };
 		3AE4BCF328FFFCC8000C67CD /* OnePass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnePass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AE4BCF628FFFCC8000C67CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AE4BCF828FFFCC8000C67CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,9 +76,6 @@
 		3AE4BD6A2900841A000C67CD /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Main.strings; sourceTree = "<group>"; };
 		3AE4BD6B2900841A000C67CD /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		3AE4BD6C2900841A000C67CD /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/HomeVC.strings; sourceTree = "<group>"; };
-		3AE4BD6E2900EDA9000C67CD /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
-		3AE4BD702900EE7C000C67CD /* TabNavigationMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigationMenu.swift; sourceTree = "<group>"; };
-		3AE4BD722900EEA5000C67CD /* NavigationMenuBaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationMenuBaseController.swift; sourceTree = "<group>"; };
 		3AE4BD75290141BD000C67CD /* BottomStackItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomStackItem.swift; sourceTree = "<group>"; };
 		3AE4BD772901422E000C67CD /* StackItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackItemView.swift; sourceTree = "<group>"; };
 		3AE4BD79290145DF000C67CD /* StackItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StackItemView.xib; sourceTree = "<group>"; };
@@ -85,6 +84,7 @@
 		3AEE5FB929027FA700F04BA3 /* DashedLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashedLineView.swift; sourceTree = "<group>"; };
 		3AEE5FBC2902814A00F04BA3 /* BaseVew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVew.swift; sourceTree = "<group>"; };
 		3AEE5FBF2902830700F04BA3 /* Navbar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Navbar.xib; sourceTree = "<group>"; };
+		3AEE5FC129029B3A00F04BA3 /* NewTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +98,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A549E04290928A8008C2B69 /* OPLabel */ = {
+			isa = PBXGroup;
+			children = (
+				3A549E0529092A14008C2B69 /* OPLabel.swift */,
+			);
+			path = OPLabel;
+			sourceTree = "<group>";
+		};
+		3A549E112910D02E008C2B69 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		3AE4BCEA28FFFCC8000C67CD = {
 			isa = PBXGroup;
 			children = (
@@ -148,10 +163,12 @@
 		3AE4BD3929006131000C67CD /* Extention */ = {
 			isa = PBXGroup;
 			children = (
+				3A549E112910D02E008C2B69 /* New Group */,
 				3AE4BD1029003272000C67CD /* Button+.swift */,
 				3AE4BD0E290031ED000C67CD /* Color+.swift */,
 				3AE4BD3A29006168000C67CD /* UIView+.swift */,
 				3AE4BD4E2900727D000C67CD /* String+.swift */,
+				3A549E0729093ADF008C2B69 /* UIGestureRecognizer+.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -202,10 +219,10 @@
 		3AE4BD412900629D000C67CD /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				3A549E04290928A8008C2B69 /* OPLabel */,
 				3AEE5FB829027F9E00F04BA3 /* DashedLineView */,
 				3AEE5FB529027D2300F04BA3 /* Navbar */,
 				3AE4BD74290141B3000C67CD /* Tabbar */,
-				3AE4BD6D2900ED6C000C67CD /* NavigationMenu */,
 				3AE4BD4929006D1B000C67CD /* OPPopupVC */,
 				3AE4BD42290062B3000C67CD /* OPButton */,
 			);
@@ -255,19 +272,10 @@
 			path = Strings;
 			sourceTree = "<group>";
 		};
-		3AE4BD6D2900ED6C000C67CD /* NavigationMenu */ = {
-			isa = PBXGroup;
-			children = (
-				3AE4BD6E2900EDA9000C67CD /* TabItem.swift */,
-				3AE4BD702900EE7C000C67CD /* TabNavigationMenu.swift */,
-				3AE4BD722900EEA5000C67CD /* NavigationMenuBaseController.swift */,
-			);
-			path = NavigationMenu;
-			sourceTree = "<group>";
-		};
 		3AE4BD74290141B3000C67CD /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
+				3AEE5FC129029B3A00F04BA3 /* NewTabBar.swift */,
 				3AE4BD75290141BD000C67CD /* BottomStackItem.swift */,
 				3AE4BD772901422E000C67CD /* StackItemView.swift */,
 				3AE4BD79290145DF000C67CD /* StackItemView.xib */,
@@ -387,18 +395,18 @@
 			files = (
 				3AE4BD3829005527000C67CD /* OPFonts.swift in Sources */,
 				3AE4BD0D29003124000C67CD /* OPButton.swift in Sources */,
-				3AE4BD6F2900EDA9000C67CD /* TabItem.swift in Sources */,
 				3AEE5FB729027DB700F04BA3 /* Navbar.swift in Sources */,
 				3AE4BD4D29006F06000C67CD /* OPPopupVC.swift in Sources */,
 				3AE4BD0F290031ED000C67CD /* Color+.swift in Sources */,
+				3A549E0629092A14008C2B69 /* OPLabel.swift in Sources */,
 				3AE4BD47290065E1000C67CD /* HomeVC.swift in Sources */,
 				3AE4BCFB28FFFCC8000C67CD /* ViewController.swift in Sources */,
 				3AE4BD76290141BD000C67CD /* BottomStackItem.swift in Sources */,
-				3AE4BD732900EEA5000C67CD /* NavigationMenuBaseController.swift in Sources */,
+				3AEE5FC329029B3A00F04BA3 /* NewTabBar.swift in Sources */,
 				3AE4BD3B29006168000C67CD /* UIView+.swift in Sources */,
-				3AE4BD712900EE7C000C67CD /* TabNavigationMenu.swift in Sources */,
 				3AE4BD4F2900727D000C67CD /* String+.swift in Sources */,
 				3AEE5FB4290237D000F04BA3 /* TabbarView.swift in Sources */,
+				3A549E0829093ADF008C2B69 /* UIGestureRecognizer+.swift in Sources */,
 				3AE4BD1129003272000C67CD /* Button+.swift in Sources */,
 				3AE4BCF728FFFCC8000C67CD /* AppDelegate.swift in Sources */,
 				3AE4BD782901422E000C67CD /* StackItemView.swift in Sources */,

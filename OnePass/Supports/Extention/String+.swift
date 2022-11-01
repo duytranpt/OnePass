@@ -9,8 +9,47 @@ import Foundation
 
 extension String {
     
-    func localized(table: String? = nil, bundle: Bundle = .main, args: CVarArg...) -> String {
+    func localized(table: String? = nil, bundle: Bundle = .main, _ args: CVarArg...) -> String {
         return String(format: NSLocalizedString(self, tableName: table, bundle: bundle, value: self, comment: ""), args.first!)
+    }
+    
+    func bo_dau_Tieng_Viet() -> String? {
+        var vn = replacingOccurrences(of: "đ", with: "d")
+        vn = vn.replacingOccurrences(of: "Đ", with: "D")
+        let data = vn.data(using: .ascii, allowLossyConversion: true)
+        var en: String? = nil
+        if (data != nil) {
+            en = String(data: data!, encoding: .ascii)
+        }
+        return en
+    }
+    
+    func string_not_empty() -> Bool {
+        if !(self is NSString) {
+            return false
+        }
+        if ((self as? String)?.trim()?.count ?? 0) > 0 {
+            return true
+        }
+        return false
+    }
+    
+    func trim() -> String? {
+        return trimmingCharacters(in: .whitespaces)
+    }
+    
+    func reformatDateString(fromFormat ff: String?, toFormat tf: String?) -> String? {
+
+        let fmt = DateFormatter()
+        fmt.calendar = Calendar(identifier: .gregorian)
+        fmt.locale = Locale(identifier: "vi_VN")
+        fmt.dateFormat = ff
+        let dt = fmt.date(from: self)
+        fmt.dateFormat = tf
+        if (dt != nil) {
+            return fmt.string(from: dt!)
+        }
+        return ""
     }
 
 }
@@ -27,4 +66,24 @@ public extension NSObject {
         return className
     }
     
+}
+
+extension Date {
+    static func dateFromString(from string: String?, withFormat format: String?) -> Date? {
+        let formatter = DateFormatter()
+        formatter.calendar = Calendar(identifier: .gregorian)
+        formatter.locale = NSLocale(localeIdentifier: "en_US_POSIX") as Locale
+        formatter.dateFormat = format
+        let date = formatter.date(from: string ?? "")
+        return date
+    }
+    
+    static func date(from string: String?, withFormat format: String?) -> Date? {
+        let formatter = DateFormatter()
+        formatter.calendar = Calendar(identifier: .gregorian)
+        formatter.locale = NSLocale(localeIdentifier: "en_US_POSIX") as Locale
+        formatter.dateFormat = format
+        let date = formatter.date(from: string ?? "")
+        return date
+    }
 }

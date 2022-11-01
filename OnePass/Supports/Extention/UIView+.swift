@@ -169,5 +169,12 @@ extension UIView {
         self.heightAnchor.constraint(equalToConstant: NavbarHeight().navbarHeight).isActive = true
     }
     
+    func addAction(action: @escaping () -> Void) {
+        let tapRecognizer = UITapGestureRecognizer { recognizer in
+            action()
+        }
+        self.addGestureRecognizer(tapRecognizer)
+        
+    }
     
 }

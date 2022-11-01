@@ -164,7 +164,7 @@ class OPButton: UIButton {
         var ButtonTitle: UILabel!
         ButtonTitle = UILabel()
         ButtonTitle.text = title
-//        ButtonTitle.font = VNAFonts.fontMedium(15)
+        ButtonTitle.font = OPFonts.fontMedium(size: 15)
         ButtonTitle.textColor = .cgRGB(rgb: "219 163 16")
         self.addSubview(ButtonTitle)
         ButtonTitle.translatesAutoresizingMaskIntoConstraints = false
@@ -182,7 +182,7 @@ class OPButton: UIButton {
         var ButtonTitle: UILabel!
         ButtonTitle = UILabel()
         ButtonTitle.text = title
-//        ButtonTitle.font = VNAFonts.fontMedium(15)
+        ButtonTitle.font = OPFonts.fontMedium(size: 15)
         ButtonTitle.textColor = .white
         self.addSubview(ButtonTitle)
         ButtonTitle.translatesAutoresizingMaskIntoConstraints = false
@@ -265,10 +265,10 @@ class OPButton: UIButton {
         
     }
 
-    func buttonLeftImg(title: String, img: UIImage?) {
+    private func buttonLeftImg(title: String, img: UIImage?) {
         
         self.boderWithColor = .clear
-        self.backgrColor = .white
+        self.backgrColor = .clear
         self.setTitle("", for: .normal)
         
         var ButtonTitle: UILabel!
@@ -301,7 +301,7 @@ class OPButton: UIButton {
     func buttonLeftImg(title: String, img: String) {
         
         self.boderWithColor = .clear
-        self.backgrColor = .white
+        self.backgrColor = .clear
         
         var ButtonTitle: UILabel!
         ButtonTitle = UILabel()
@@ -331,7 +331,7 @@ class OPButton: UIButton {
     func buttonRightImg(title: String, img: String) {
         
         self.boderWithColor = .clear
-        self.backgrColor = .white
+        self.backgrColor = .clear
         
         var ButtonTitle: UILabel!
         ButtonTitle = UILabel()
@@ -359,7 +359,7 @@ class OPButton: UIButton {
         ButtonTitle.heightAnchor.constraint(equalToConstant: 18).isActive = true
     }
     
-    func buttonRightImg(title: String, img: UIImage?) {
+    private func buttonRightImg(title: String, img: UIImage?) {
         
         self.boderWithColor = .clear
         self.backgrColor = .rgbColor(red: 219, green: 163, blue: 16, alpha: 1)

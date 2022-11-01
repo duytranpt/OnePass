@@ -39,7 +39,7 @@ class NavbarHeight {
             let window = UIApplication.shared.keyWindow
             let topPadding = window?.safeAreaInsets.top
             let bottomPadding = window?.safeAreaInsets.bottom
-            if topPadding! > 20 {
+            if topPadding ?? 0 > 20 {
                 height += 36
             }
 
