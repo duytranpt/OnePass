@@ -3,4 +3,162 @@
    uuid = "C29E3AD4-CAFC-416B-AFDA-4EEDF28ADA58"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "01D232C7-F3C8-4A5E-A658-21870AF35A52"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OnePass/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "saveBtn(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "39FD610D-AF75-4964-94CE-B6B6A3D11961"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OnePass/Presentation/Scenes/YourPassVC/YourPassVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CFEC98F1-2755-4D4A-845D-4D4E9B9BFDC7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OnePass/Presentation/Scenes/YourPassVC/YourPassVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "YourPassVC"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "CFEC98F1-2755-4D4A-845D-4D4E9B9BFDC7 - ab9bd3d57cb7892b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "OnePass.YourPassVC.dataModelPass.getter : Swift.Optional&lt;Swift.Array&lt;OnePass.PassModel&gt;&gt;"
+                  moduleName = "OnePass"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/duytran/OnePass/OnePass/Presentation/Scenes/YourPassVC/YourPassVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "CFEC98F1-2755-4D4A-845D-4D4E9B9BFDC7 - 7992ea87fa1015f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "OnePass.YourPassVC.dataModelPass.setter : Swift.Optional&lt;Swift.Array&lt;OnePass.PassModel&gt;&gt;"
+                  moduleName = "OnePass"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/duytran/OnePass/OnePass/Presentation/Scenes/YourPassVC/YourPassVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "CFEC98F1-2755-4D4A-845D-4D4E9B9BFDC7 - 7d3e41181c12e728"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "OnePass.YourPassVC.dataModelPass.modify : Swift.Optional&lt;Swift.Array&lt;OnePass.PassModel&gt;&gt;"
+                  moduleName = "OnePass"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/duytran/OnePass/OnePass/Presentation/Scenes/YourPassVC/YourPassVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "CFEC98F1-2755-4D4A-845D-4D4E9B9BFDC7 - 7c665a734084e59"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "OnePass.YourPassVC.dataModelPass.modify : Swift.Optional&lt;Swift.Array&lt;OnePass.PassModel&gt;&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "OnePass"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/duytran/OnePass/OnePass/Presentation/Scenes/YourPassVC/YourPassVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "CFEC98F1-2755-4D4A-845D-4D4E9B9BFDC7 - bcf5d587213992f1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "OnePass.YourPassVC.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; OnePass.YourPassVC"
+                  moduleName = "OnePass"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/duytran/OnePass/OnePass/Presentation/Scenes/YourPassVC/YourPassVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  uuid = "CFEC98F1-2755-4D4A-845D-4D4E9B9BFDC7 - d56d959cb14c234e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "OnePass.YourPassVC.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;OnePass.YourPassVC&gt;"
+                  moduleName = "OnePass"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/duytran/OnePass/OnePass/Presentation/Scenes/YourPassVC/YourPassVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "104">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2A638458-89C2-4CF6-B70D-7C8BD08312C2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OnePass/Presentation/Scenes/YourPassVC/YourPassVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "numberOfSections(in:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

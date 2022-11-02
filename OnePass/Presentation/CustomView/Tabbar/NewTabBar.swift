@@ -38,8 +38,8 @@ class NewTabBar: UITabBarController {
         self.setupUI()
         self.setupTabs()
         
-        let stb = UIStoryboard(name: "OPPopupVC", bundle: Bundle.main)
-        let vc = stb.instantiateViewController(withIdentifier: "OPPopupVC") as! OPPopupVC
+        let stb = UIStoryboard(name: "YourPassVC", bundle: Bundle.main)
+        let vc = stb.instantiateViewController(withIdentifier: "YourPassVC") as! YourPassVC
         
         let stb2 = UIStoryboard(name: "HomeVC", bundle:Bundle.main)
         let vc2 = stb2.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
@@ -83,7 +83,6 @@ class NewTabBar: UITabBarController {
         addbutton.heightAnchor.constraint(equalToConstant: 66).isActive = true
         
         addbutton.addAction {
-            print("0000")
             let stb = UIStoryboard(name: "OPPopupVC", bundle: Bundle.main)
             let vc = stb.instantiateViewController(withIdentifier: "OPPopupVC") as! OPPopupVC
             vc.modalPresentationStyle = .formSheet
@@ -114,7 +113,7 @@ class NewTabBar: UITabBarController {
     
     func changeTab(tab: Int) {
         self.selectedIndex = tab
-        print("selected: \(self.selectedIndex) ")
+       
         
     }
 }
@@ -124,7 +123,6 @@ extension NewTabBar: StackItemViewDelegate {
         self.tabs[self.currentIndex].isSelected = false
         view.isSelected = true
         self.currentIndex = self.tabs.firstIndex(where: { $0 === view }) ?? 0
-        print(currentIndex)
         changeTab(tab: currentIndex)
     }
     

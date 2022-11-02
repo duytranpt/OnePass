@@ -9,6 +9,10 @@ import UIKit
 
 class OPCell: UITableViewCell {
 
+    @IBOutlet weak var showPass: UIButton!
+    @IBOutlet weak var passWord: UILabel!
+    @IBOutlet weak var displayName: UILabel!
+    @IBOutlet weak var icon: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -17,7 +21,11 @@ class OPCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+    }
+    
+    func fillData(data: PassModel) {
+        displayName.text = data.app
+        passWord.text = data.passWord
     }
     
 }
