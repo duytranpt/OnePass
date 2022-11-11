@@ -24,13 +24,15 @@ extension String {
         return en
     }
     
-    func string_not_empty() -> Bool {
-        if !(self is NSString) {
+    func string_not_empty() -> Bool? {
+        if self == nil {
             return false
         }
-        if ((self as? String)?.trim()?.count ?? 0) > 0 {
+        
+        if self.trim()?.count ?? 0 > 0 {
             return true
         }
+
         return false
     }
     

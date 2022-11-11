@@ -31,6 +31,7 @@ extension UIColor {
     }
     
     static let text_Red_2 = colorFromHex("FF5C22")
+    static let LightTextColor = colorFromHex("919191")
     static let button_main_color = rgbColor(red: 219, green: 163, blue: 16, alpha: 1.0)
     static let text_gray_color = rgbColor(red: 144, green: 144, blue: 144, alpha: 1.0)
     static let text_Color = rgbColor(red: 47, green: 47, blue: 47, alpha: 1)

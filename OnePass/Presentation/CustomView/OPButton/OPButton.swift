@@ -92,6 +92,9 @@ class OPButton: UIButton {
         setupButton()
     }
     
+    
+    var imgView: UIImageView?
+    
     private func updateView() {
         
         switch type {
@@ -164,7 +167,7 @@ class OPButton: UIButton {
         var ButtonTitle: UILabel!
         ButtonTitle = UILabel()
         ButtonTitle.text = title
-        ButtonTitle.font = OPFonts.fontMedium(size: 15)
+        ButtonTitle.font = .fontMedium(size: 15)
         ButtonTitle.textColor = .cgRGB(rgb: "219 163 16")
         self.addSubview(ButtonTitle)
         ButtonTitle.translatesAutoresizingMaskIntoConstraints = false
@@ -182,7 +185,7 @@ class OPButton: UIButton {
         var ButtonTitle: UILabel!
         ButtonTitle = UILabel()
         ButtonTitle.text = title
-        ButtonTitle.font = OPFonts.fontMedium(size: 15)
+        ButtonTitle.font = .fontMedium(size: 15)
         ButtonTitle.textColor = .white
         self.addSubview(ButtonTitle)
         ButtonTitle.translatesAutoresizingMaskIntoConstraints = false
@@ -442,6 +445,17 @@ class OPButton: UIButton {
         
     }
         
+    init?(HeaderButton image: String?, isRight: Bool, rect: CGRect) {
+        super.init(frame: rect)
+        imgView = UIImageView(frame: bounds)
+        imgView!.contentMode = .center
+        if isRight {
+            imgView = UIImageView(frame: CGRect(x: self.widthv - 32, y: self.heightv / 2 - 18 / 2, width: 18, height: 18))
+        }
+        imgView?.isUserInteractionEnabled = false
+        imgView!.image = UIImage(named: image ?? "")
+        self.addSubview(imgView!)
+    }
     
     func shake() {
         let shake           = CABasicAnimation(keyPath: "position")

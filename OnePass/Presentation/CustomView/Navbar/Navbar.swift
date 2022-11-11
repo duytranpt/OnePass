@@ -25,7 +25,7 @@ class Navbar: BaseView {
         rightBtn.isHidden = true
         titleLbl.text = "One Password"
         titleLbl.textColor = .cgRGB(rgb: "47 47 47")
-        titleLbl.font = OPFonts.fontBold(size: 15)
+        titleLbl.font = .fontBold(size: 15)
     }
     
      

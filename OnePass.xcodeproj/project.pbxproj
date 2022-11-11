@@ -18,6 +18,11 @@
 		3A549E2729111969008C2B69 /* OPCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A549E2529111969008C2B69 /* OPCell.swift */; };
 		3A549E2829111969008C2B69 /* OPCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A549E2629111969008C2B69 /* OPCell.xib */; };
 		3A549E2B2911264D008C2B69 /* BisKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3A549E2A2911264D008C2B69 /* BisKit */; };
+		3A69E88B291204C300FEA3AF /* UserDefaults+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A69E88A291204C300FEA3AF /* UserDefaults+.swift */; };
+		3A69E88E291248D100FEA3AF /* OPTextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A69E88D291248D100FEA3AF /* OPTextInputView.swift */; };
+		3A69E89429135CC800FEA3AF /* OPBaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A69E89329135CC800FEA3AF /* OPBaseVC.swift */; };
+		3A69E89629135D7900FEA3AF /* OPHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A69E89529135D7900FEA3AF /* OPHeaderView.swift */; };
+		3A69E8992913A03C00FEA3AF /* OPAlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A69E8982913A03C00FEA3AF /* OPAlertAction.swift */; };
 		3AE4BCF728FFFCC8000C67CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE4BCF628FFFCC8000C67CD /* AppDelegate.swift */; };
 		3AE4BCF928FFFCC8000C67CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE4BCF828FFFCC8000C67CD /* SceneDelegate.swift */; };
 		3AE4BCFB28FFFCC8000C67CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE4BCFA28FFFCC8000C67CD /* ViewController.swift */; };
@@ -64,6 +69,11 @@
 		3A549E2129110EA6008C2B69 /* OPAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPAlertController.swift; sourceTree = "<group>"; };
 		3A549E2529111969008C2B69 /* OPCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPCell.swift; sourceTree = "<group>"; };
 		3A549E2629111969008C2B69 /* OPCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OPCell.xib; sourceTree = "<group>"; };
+		3A69E88A291204C300FEA3AF /* UserDefaults+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+.swift"; sourceTree = "<group>"; };
+		3A69E88D291248D100FEA3AF /* OPTextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPTextInputView.swift; sourceTree = "<group>"; };
+		3A69E89329135CC800FEA3AF /* OPBaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPBaseVC.swift; sourceTree = "<group>"; };
+		3A69E89529135D7900FEA3AF /* OPHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPHeaderView.swift; sourceTree = "<group>"; };
+		3A69E8982913A03C00FEA3AF /* OPAlertAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPAlertAction.swift; sourceTree = "<group>"; };
 		3AE4BCF328FFFCC8000C67CD /* OnePass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnePass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AE4BCF628FFFCC8000C67CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AE4BCF828FFFCC8000C67CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,13 +134,6 @@
 			path = OPLabel;
 			sourceTree = "<group>";
 		};
-		3A549E112910D02E008C2B69 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		3A549E122910FDC0008C2B69 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +179,23 @@
 			path = YourPassVC;
 			sourceTree = "<group>";
 		};
+		3A69E88C2912477100FEA3AF /* OPTextInputView */ = {
+			isa = PBXGroup;
+			children = (
+				3A69E88D291248D100FEA3AF /* OPTextInputView.swift */,
+			);
+			path = OPTextInputView;
+			sourceTree = "<group>";
+		};
+		3A69E8972913A00600FEA3AF /* OPAlertVC */ = {
+			isa = PBXGroup;
+			children = (
+				3A549E2129110EA6008C2B69 /* OPAlertController.swift */,
+				3A69E8982913A03C00FEA3AF /* OPAlertAction.swift */,
+			);
+			path = OPAlertVC;
+			sourceTree = "<group>";
+		};
 		3AE4BCEA28FFFCC8000C67CD = {
 			isa = PBXGroup;
 			children = (
@@ -201,7 +221,6 @@
 				3AE4BD3D29006221000C67CD /* Resources */,
 				3AE4BD3C290061E5000C67CD /* Supports */,
 				3AE4BCFA28FFFCC8000C67CD /* ViewController.swift */,
-				3A549E2129110EA6008C2B69 /* OPAlertController.swift */,
 				3AE4BCFC28FFFCC8000C67CD /* Main.storyboard */,
 				3AE4BCFF28FFFCC9000C67CD /* Assets.xcassets */,
 				3AE4BD0128FFFCC9000C67CD /* LaunchScreen.storyboard */,
@@ -228,7 +247,7 @@
 		3AE4BD3929006131000C67CD /* Extention */ = {
 			isa = PBXGroup;
 			children = (
-				3A549E112910D02E008C2B69 /* New Group */,
+				3A69E88A291204C300FEA3AF /* UserDefaults+.swift */,
 				3AE4BD1029003272000C67CD /* Button+.swift */,
 				3AE4BD0E290031ED000C67CD /* Color+.swift */,
 				3AE4BD3A29006168000C67CD /* UIView+.swift */,
@@ -266,7 +285,7 @@
 		3AE4BD3F29006283000C67CD /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				3AEE5FBB2902813E00F04BA3 /* BaseView */,
+				3AEE5FBB2902813E00F04BA3 /* Base */,
 				3AE4BD412900629D000C67CD /* CustomView */,
 				3AE4BD4029006295000C67CD /* Scenes */,
 			);
@@ -285,6 +304,8 @@
 		3AE4BD412900629D000C67CD /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				3A69E8972913A00600FEA3AF /* OPAlertVC */,
+				3A69E88C2912477100FEA3AF /* OPTextInputView */,
 				3A549E04290928A8008C2B69 /* OPLabel */,
 				3AEE5FB829027F9E00F04BA3 /* DashedLineView */,
 				3AEE5FB529027D2300F04BA3 /* Navbar */,
@@ -367,12 +388,14 @@
 			path = DashedLineView;
 			sourceTree = "<group>";
 		};
-		3AEE5FBB2902813E00F04BA3 /* BaseView */ = {
+		3AEE5FBB2902813E00F04BA3 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				3A69E89329135CC800FEA3AF /* OPBaseVC.swift */,
 				3AEE5FBC2902814A00F04BA3 /* BaseVew.swift */,
+				3A69E89529135D7900FEA3AF /* OPHeaderView.swift */,
 			);
-			path = BaseView;
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -472,11 +495,14 @@
 				3A549E1E291107E1008C2B69 /* YourPassVC.swift in Sources */,
 				3AE4BD0D29003124000C67CD /* OPButton.swift in Sources */,
 				3A549E1A2910FF66008C2B69 /* SwiftyJSON.swift in Sources */,
+				3A69E89429135CC800FEA3AF /* OPBaseVC.swift in Sources */,
 				3AEE5FB729027DB700F04BA3 /* Navbar.swift in Sources */,
 				3AE4BD4D29006F06000C67CD /* OPPopupVC.swift in Sources */,
+				3A69E88E291248D100FEA3AF /* OPTextInputView.swift in Sources */,
 				3AE4BD0F290031ED000C67CD /* Color+.swift in Sources */,
 				3A549E0629092A14008C2B69 /* OPLabel.swift in Sources */,
 				3AE4BD47290065E1000C67CD /* HomeVC.swift in Sources */,
+				3A69E89629135D7900FEA3AF /* OPHeaderView.swift in Sources */,
 				3A549E2229110EA6008C2B69 /* OPAlertController.swift in Sources */,
 				3AE4BCFB28FFFCC8000C67CD /* ViewController.swift in Sources */,
 				3AE4BD76290141BD000C67CD /* BottomStackItem.swift in Sources */,
@@ -484,12 +510,14 @@
 				3AE4BD3B29006168000C67CD /* UIView+.swift in Sources */,
 				3AE4BD4F2900727D000C67CD /* String+.swift in Sources */,
 				3AEE5FB4290237D000F04BA3 /* TabbarView.swift in Sources */,
+				3A69E8992913A03C00FEA3AF /* OPAlertAction.swift in Sources */,
 				3A549E0829093ADF008C2B69 /* UIGestureRecognizer+.swift in Sources */,
 				3A549E1B2910FF66008C2B69 /* SwifyJSON+.swift in Sources */,
 				3AE4BD1129003272000C67CD /* Button+.swift in Sources */,
 				3AE4BCF728FFFCC8000C67CD /* AppDelegate.swift in Sources */,
 				3AE4BD782901422E000C67CD /* StackItemView.swift in Sources */,
 				3AEE5FBD2902814A00F04BA3 /* BaseVew.swift in Sources */,
+				3A69E88B291204C300FEA3AF /* UserDefaults+.swift in Sources */,
 				3AE4BCF928FFFCC8000C67CD /* SceneDelegate.swift in Sources */,
 				3A549E2729111969008C2B69 /* OPCell.swift in Sources */,
 				3AEE5FBA29027FA700F04BA3 /* DashedLineView.swift in Sources */,

@@ -85,6 +85,23 @@ extension UIView {
         }
     }
     
+    var xRight: CGFloat {
+        get {
+            self.frame.origin.x + self.widthv
+        }
+        set {
+            self.x = newValue - self.widthv
+        }
+    }
+    
+    var yBottom: CGFloat {
+        get {
+            self.y + self.heightv
+        }
+        set {
+            self.y = yBottom - self.heightv
+        }
+    }
     
     @IBInspectable
     public var BGHexColor: String {
@@ -174,7 +191,45 @@ extension UIView {
             action()
         }
         self.addGestureRecognizer(tapRecognizer)
-        
     }
     
+    var safeAreaTop: CGFloat {
+        var topSafeAreaHeight: CGFloat = 0
+        if #available(iOS 11.0, *) {
+            let window = UIApplication.shared.windows[0]
+            let safeFrame = window.safeAreaLayoutGuide.layoutFrame
+            topSafeAreaHeight = safeFrame.minY
+        }
+        return topSafeAreaHeight
+    }
+
+    func navbarHeight() -> CGFloat {
+        var height: CGFloat = 64
+        if checkiPhoneX() {
+            height += 36
+        }
+        return height
+    }
+    
+    func checkiPhoneX() -> Bool {
+        return safeAreaTop > 20 ?  true : false
+    }
+    
+    func HEADER_STATUSBAR() -> CGFloat {
+        var height: CGFloat = 20
+        if checkiPhoneX() {
+            height = safeAreaTop
+        }
+        return height
+    }
+    
+    func HEADER_HEIGH() -> CGFloat {
+        var height: CGFloat = 64
+        if checkiPhoneX() {
+            height = safeAreaTop + 44
+        }
+        return height
+    }
+
 }
+

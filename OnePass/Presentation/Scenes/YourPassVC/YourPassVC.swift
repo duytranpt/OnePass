@@ -8,10 +8,11 @@
 import UIKit
 import BisKit
 
-class YourPassVC: UIViewController {
+class YourPassVC: OPBaseVC {
 
     @IBOutlet weak var tableView: UITableView!
-    var dataModelPass = UserDefaults.getPassModel(userSessionKey: "Pass")
+    let userSessionKey = "Pass"
+    var dataModelPass: [PassModel] = []
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,13 +24,15 @@ class YourPassVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        dataModelPass = UserDefaults.getPassModel(userSessionKey: "Pass")
+        dataModelPass = UserDefaults.getPassModel(userSessionKey: userSessionKey)!
         tableView.reloadData()
+        print(dataModelPass.count)
+        print("dataModelPass: \(dataModelPass)")
     }
 
     @IBAction func getData(_ sender: Any) {
-        UserDefaults.clearPassModel(userSessionKey: "Pass")
-        dataModelPass = UserDefaults.getPassModel(userSessionKey: "Pass")
+        UserDefaults.clearPassModel(userSessionKey: userSessionKey)
+        dataModelPass = UserDefaults.getPassModel(userSessionKey: userSessionKey)!
         tableView.reloadData()
     }
     
@@ -42,13 +45,13 @@ extension YourPassVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return dataModelPass!.count
+        return dataModelPass.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "OPCell", for: indexPath) as! OPCell
         cell.showPass.isHidden = true
-        cell.fillData(data: dataModelPass![indexPath.section])
+        cell.fillData(data: dataModelPass[indexPath.section])
         
         
         return cell
@@ -62,9 +65,7 @@ extension YourPassVC: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.cellForRow(at: indexPath) as! OPCell
         UIPasteboard.general.string = cell.passWord.text
         
-        let label = ToppingLabel(text: "Đã sao chép password")
-        let biscuit = BiscuitViewController(title: (cell.displayName.text ?? ""), timeout: 1.5)
-        self.present(biscuit, animated: true, completion: nil)
+        self.showAlertHeader(title: "Copied \(cell.displayName!.text) password")
     }
     
 }

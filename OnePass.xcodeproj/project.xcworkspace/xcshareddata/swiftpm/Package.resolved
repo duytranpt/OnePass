@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "biskit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ho0t/BisKit",
+      "state" : {
+        "branch" : "master",
+        "revision" : "e782952cec7fa62d6e135429f4eb6eb223d3422e"
+      }
+    }
+  ],
+  "version" : 2
+}

@@ -38,42 +38,43 @@
                                             <constraint firstAttribute="height" constant="200" id="yOz-Iy-Cwm"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kns-pj-pjJ" customClass="Navbar" customModule="OnePass" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" priority="250" constant="100" id="YkF-c4-J9W"/>
-                                        </constraints>
-                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="kns-pj-pjJ" secondAttribute="trailing" id="6JQ-2k-PsZ"/>
                                     <constraint firstAttribute="top" secondItem="BWy-SS-ijC" secondAttribute="top" id="SGw-96-7L7"/>
                                     <constraint firstAttribute="height" constant="350" id="U07-Se-N2M"/>
                                     <constraint firstItem="IJr-eb-xWn" firstAttribute="leading" secondItem="BWy-SS-ijC" secondAttribute="leading" constant="15" id="d9Q-Eh-GP0"/>
                                     <constraint firstAttribute="trailing" secondItem="IJr-eb-xWn" secondAttribute="trailing" constant="15" id="e0x-Fe-Dfr"/>
-                                    <constraint firstItem="kns-pj-pjJ" firstAttribute="top" secondItem="BWy-SS-ijC" secondAttribute="top" id="kKs-r2-uJO"/>
                                     <constraint firstAttribute="bottom" secondItem="IJr-eb-xWn" secondAttribute="bottom" constant="15" id="ppo-VM-anR"/>
-                                    <constraint firstItem="kns-pj-pjJ" firstAttribute="leading" secondItem="BWy-SS-ijC" secondAttribute="leading" id="uUG-hD-NbV"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="BGHexColor" value="FCEFEC"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U9V-3t-s7z">
+                                <rect key="frame" x="15" y="370" width="384" height="80"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="vS9-rS-B1V"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemGray4Color"/>
                         <constraints>
+                            <constraint firstItem="U9V-3t-s7z" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="FXY-5C-NSw"/>
                             <constraint firstItem="BWy-SS-ijC" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="UZz-h0-4sO"/>
                             <constraint firstItem="BWy-SS-ijC" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Vn1-kD-qId"/>
                             <constraint firstItem="BWy-SS-ijC" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="ir0-4n-rI8"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="U9V-3t-s7z" secondAttribute="trailing" constant="15" id="uhI-ab-W5Y"/>
+                            <constraint firstItem="U9V-3t-s7z" firstAttribute="top" secondItem="BWy-SS-ijC" secondAttribute="bottom" constant="20" id="v3A-lf-anM"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="contentLbl" destination="E3K-uO-8JF" id="hmM-fW-IY7"/>
                         <outlet property="contentView" destination="IJr-eb-xWn" id="s92-ER-7U6"/>
                         <outlet property="mainView" destination="BWy-SS-ijC" id="0c1-cW-bpR"/>
+                        <outlet property="newinputView" destination="U9V-3t-s7z" id="yoI-BY-46A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

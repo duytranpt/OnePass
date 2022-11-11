@@ -7,8 +7,9 @@
 
 import UIKit
 
-class HomeVC: UIViewController {
+class HomeVC: OPBaseVC {
     
+    @IBOutlet weak var newinputView: UIView!
     @IBOutlet weak var contentLbl: OPLabel!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var mainView: UIView!
@@ -17,6 +18,14 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.setHeader(title: "Xin chao", subTitle: "casc bajn", Type: .TWO_LINE)
+        
+        self.navigationBarView?.showRightButton("icCloseWhiteNew", action: {
+            self.showNewAlertOkay(withMessage: "tat thong bao di") {
+                print("hihihaha")
+            }
+        })
+        print(contentView.checkiPhoneX())
         contentView.roundCorners(radius: 20, corners: .allCorners)
         mainView.roundCorners(radius: 20, corners: [.bottomLeft, .bottomRight])
                   
@@ -37,8 +46,12 @@ class HomeVC: UIViewController {
         
         
         let fullString = String(format: "Công ty Cổ phần Giải pháp thanh toán Việt Nam %@ Tầng 8, số 22 phố Láng Hạ, phường Láng Hạ, quận Đống Đa, thành phố Hà Nội", arguments: args)
-        contentLbl.formatText(fullString: fullString as NSString, boldPartOfString: args, font: OPFonts.fontMedium(size: 13), boldFont: OPFonts.fontBoldItalic(size: 13), color: .red, underLine: true)
-      
+        contentLbl.formatText(fullString: fullString as NSString, boldPartOfString: args, font: .fontMedium(size: 13), boldFont: .fontBoldItalic(size: 13), color: .red, underLine: true)
+        
+        var demoview: OPTextInputView!
+        demoview = OPTextInputView(newInputViewWithTitle: "Thông tin trên thẻ", andType: .INPUT_TYPE_NAME, andIsRequired: true, andFrame: CGRect(origin: .zero, size: CGSize(width: self.view.widthv - 30, height: 59)))
+        newinputView.addSubview(demoview)
+//        demoview.max_length = 15
     }
     
     @IBAction func addAction(_ sender: Any) {
