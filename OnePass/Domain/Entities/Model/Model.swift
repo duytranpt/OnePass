@@ -10,18 +10,18 @@ import Foundation
 struct PassModel: Codable {
     
     var id: String?
-    var dateCreate: Date?
+    var dateCreate: Int64?
     var app: String?
     var passWord: String?
     
     init(_ json: JSON) {
         id = json["id"].stringValue
-        dateCreate = json["dateCreate"].dateValue
+        dateCreate = json["dateCreate"].int64Value
         app = json["app"].stringValue
         passWord = json["passWord"].stringValue
     }
     
-    init(id: String, dateCreate: Date, app: String, passWord: String) {
+    init(id: String, dateCreate: Int64, app: String, passWord: String) {
         self.id = id
         self.dateCreate = dateCreate
         self.app = app
@@ -39,20 +39,3 @@ extension PassModel: Equatable {
     }
 }
 
-extension JSON {
-    public var dateValue: Date? {
-        get {
-            if let str = self.string {
-                return JSON.jsonDateFormatter.date(from: str)
-            }
-            return nil
-        }
-    }
-
-    private static let jsonDateFormatter: DateFormatter = {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
-        dateFormatter.timeZone = TimeZone.autoupdatingCurrent
-        return dateFormatter
-    }()
-}

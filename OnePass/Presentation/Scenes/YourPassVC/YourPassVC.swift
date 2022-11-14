@@ -12,27 +12,33 @@ class YourPassVC: OPBaseVC {
 
     @IBOutlet weak var tableView: UITableView!
     let userSessionKey = "Pass"
-    var dataModelPass: [PassModel] = []
+    var dataModelPass = [PassModel]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.setHeader(title: "Your password", subTitle: "keep all your passwords", Type: .ONE_LINE_SIMPLE)
+        self.hideAllButton()
 
         tableView.delegate = self
         tableView.dataSource = self
         tableView.sectionFooterHeight = 12
         tableView.backgroundColor = .clear
         tableView.register(UINib(nibName: "OPCell", bundle: .main), forCellReuseIdentifier: "OPCell")
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         dataModelPass = UserDefaults.getPassModel(userSessionKey: userSessionKey)!
         tableView.reloadData()
-        print(dataModelPass.count)
-        print("dataModelPass: \(dataModelPass)")
+        
+        dataModelPass.sort { $0.dateCreate! > $1.dateCreate! }
+
     }
 
     @IBAction func getData(_ sender: Any) {
         UserDefaults.clearPassModel(userSessionKey: userSessionKey)
-        dataModelPass = UserDefaults.getPassModel(userSessionKey: userSessionKey)!
+        dataModelPass = [PassModel]()
+//        dataModelPass = UserDefaults.getPassModel(userSessionKey: userSessionKey)!
         tableView.reloadData()
     }
     

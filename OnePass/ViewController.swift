@@ -20,6 +20,7 @@ class ViewController: OPBaseVC {
         super.viewDidLoad()
         
         self.setHeader(title: "Add new", subTitle: "", Type: .ONE_LINE_SIMPLE)
+        self.hideAllButton()
         let changeBackground = UIMenuItem(title: "Tap Me", action: #selector(changeBackgroundColour))
         UIMenuController.shared.menuItems = [changeBackground]
         view.endEditing(true)
@@ -36,7 +37,7 @@ class ViewController: OPBaseVC {
         displayLbl.font = .fontRegularItalic(size: 20)
         view.endEditing(true)
         
-        let date = Date()
+        let date = Date().millisecondsSince1970
         let passWord = randomString(length: 20)
         item = PassModel(id: randomNumber(length: 10), dateCreate: date, app: nameApp.text ?? "", passWord: passWord)
         showLbl.text = "Áp: \(nameApp.text!) \nMk: \(passWord) \nDate: \(date)"

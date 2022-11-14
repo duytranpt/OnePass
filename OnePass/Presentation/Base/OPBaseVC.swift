@@ -21,6 +21,11 @@ class OPBaseVC: UIViewController {
         navigationBarView = OPHeaderView(initHeaderView: title, subTitle: subTitle, type: Type, nav: self.navigationController, andFrame: CGRect(origin: .zero, size: CGSize(width: self.view.widthv, height: self.view.navbarHeight())))
         view.addSubview(navigationBarView!)
     }
+    
+    func hideAllButton() {
+        navigationBarView?.rightButton?.isHidden = true
+        navigationBarView?.backButton?.isHidden = true
+    }
 }
 
 extension  OPBaseVC {

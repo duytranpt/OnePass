@@ -7,11 +7,11 @@
 
 import UIKit
 
-class OPPopupVC: UIViewController {
+class OPPopupVC: OPBaseVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.backgroundColor = .rgbColor(red: 0, green: 0, blue: 0, alpha: 0.6)
         
     }
 

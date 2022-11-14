@@ -85,12 +85,12 @@ class NewTabBar: UITabBarController {
         addbutton.addAction {
             let stb = UIStoryboard(name: "OPPopupVC", bundle: Bundle.main)
             let vc = stb.instantiateViewController(withIdentifier: "OPPopupVC") as! OPPopupVC
-            vc.modalPresentationStyle = .formSheet
+            vc.modalPresentationStyle = .currentContext
             vc.isModalInPresentation  = true
 
             if #available(iOS 15.0, *) {
                 if let sheet = vc.sheetPresentationController {
-                    sheet.detents = [.medium(), .large()]
+                    sheet.detents = [.large()]
                     sheet.prefersScrollingExpandsWhenScrolledToEdge = false
                     sheet.preferredCornerRadius = 20
                 }

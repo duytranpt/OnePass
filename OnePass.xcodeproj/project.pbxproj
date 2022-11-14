@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A4D730529222FA000495E78 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D730429222FA000495E78 /* Date+.swift */; };
 		3A549E0629092A14008C2B69 /* OPLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A549E0529092A14008C2B69 /* OPLabel.swift */; };
 		3A549E0829093ADF008C2B69 /* UIGestureRecognizer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A549E0729093ADF008C2B69 /* UIGestureRecognizer+.swift */; };
 		3A549E142910FDCE008C2B69 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A549E132910FDCD008C2B69 /* Model.swift */; };
@@ -59,6 +60,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A4D730429222FA000495E78 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		3A549E0529092A14008C2B69 /* OPLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPLabel.swift; sourceTree = "<group>"; };
 		3A549E0729093ADF008C2B69 /* UIGestureRecognizer+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIGestureRecognizer+.swift"; sourceTree = "<group>"; };
 		3A549E132910FDCD008C2B69 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 		3A69E89329135CC800FEA3AF /* OPBaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPBaseVC.swift; sourceTree = "<group>"; };
 		3A69E89529135D7900FEA3AF /* OPHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPHeaderView.swift; sourceTree = "<group>"; };
 		3A69E8982913A03C00FEA3AF /* OPAlertAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPAlertAction.swift; sourceTree = "<group>"; };
+		3AB70AA6291EA25B00D40391 /* OnePass.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OnePass.entitlements; sourceTree = "<group>"; };
 		3AE4BCF328FFFCC8000C67CD /* OnePass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnePass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AE4BCF628FFFCC8000C67CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AE4BCF828FFFCC8000C67CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -215,6 +218,7 @@
 		3AE4BCF528FFFCC8000C67CD /* OnePass */ = {
 			isa = PBXGroup;
 			children = (
+				3AB70AA6291EA25B00D40391 /* OnePass.entitlements */,
 				3A549E152910FF00008C2B69 /* Domain */,
 				3AE4BD43290062EB000C67CD /* AppConfigue */,
 				3AE4BD3F29006283000C67CD /* Presentation */,
@@ -252,6 +256,7 @@
 				3AE4BD0E290031ED000C67CD /* Color+.swift */,
 				3AE4BD3A29006168000C67CD /* UIView+.swift */,
 				3AE4BD4E2900727D000C67CD /* String+.swift */,
+				3A4D730429222FA000495E78 /* Date+.swift */,
 				3A549E0729093ADF008C2B69 /* UIGestureRecognizer+.swift */,
 			);
 			path = Extention;
@@ -295,6 +300,7 @@
 		3AE4BD4029006295000C67CD /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				3AE4BD4929006D1B000C67CD /* OPPopupVC */,
 				3A549E1C291107C4008C2B69 /* YourPassVC */,
 				3AE4BD48290065EF000C67CD /* HomeVC */,
 			);
@@ -310,7 +316,6 @@
 				3AEE5FB829027F9E00F04BA3 /* DashedLineView */,
 				3AEE5FB529027D2300F04BA3 /* Navbar */,
 				3AE4BD74290141B3000C67CD /* Tabbar */,
-				3AE4BD4929006D1B000C67CD /* OPPopupVC */,
 				3AE4BD42290062B3000C67CD /* OPButton */,
 			);
 			path = CustomView;
@@ -505,6 +510,7 @@
 				3A69E89629135D7900FEA3AF /* OPHeaderView.swift in Sources */,
 				3A549E2229110EA6008C2B69 /* OPAlertController.swift in Sources */,
 				3AE4BCFB28FFFCC8000C67CD /* ViewController.swift in Sources */,
+				3A4D730529222FA000495E78 /* Date+.swift in Sources */,
 				3AE4BD76290141BD000C67CD /* BottomStackItem.swift in Sources */,
 				3AEE5FC329029B3A00F04BA3 /* NewTabBar.swift in Sources */,
 				3AE4BD3B29006168000C67CD /* UIView+.swift in Sources */,
@@ -678,6 +684,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = OnePass/OnePass.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VMBR234FH9;
@@ -694,7 +701,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = VNPAY.OnePass;
+				PRODUCT_BUNDLE_IDENTIFIER = "VNPAY-OnePass";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -707,6 +714,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = OnePass/OnePass.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VMBR234FH9;
@@ -723,8 +732,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = VNPAY.OnePass;
+				PRODUCT_BUNDLE_IDENTIFIER = "VNPAY-OnePass";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
