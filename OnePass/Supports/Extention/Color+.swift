@@ -30,13 +30,16 @@ extension UIColor {
                             alpha: 1.0)
     }
     
-    static let text_Red_2 = colorFromHex("FF5C22")
-    static let LightTextColor = colorFromHex("919191")
-    static let button_main_color = rgbColor(red: 219, green: 163, blue: 16, alpha: 1.0)
-    static let text_gray_color = rgbColor(red: 144, green: 144, blue: 144, alpha: 1.0)
-    static let text_Color = rgbColor(red: 47, green: 47, blue: 47, alpha: 1)
-    //    45 103 130
-    
+    func hexStringFromColor(color: UIColor) -> String {
+        let components = color.cgColor.components
+        let r: CGFloat = components?[0] ?? 0.0
+        let g: CGFloat = components?[1] ?? 0.0
+        let b: CGFloat = components?[2] ?? 0.0
+
+        let hexString = String.init(format: "#%02lX%02lX%02lX", lroundf(Float(r * 255)), lroundf(Float(g * 255)), lroundf(Float(b * 255)))
+        return hexString
+     }
+
     static func cgRGB(rgb: String) -> UIColor {
         let colorArr = rgb.components(separatedBy: " ")
         let r = Int(colorArr[0])!
@@ -64,4 +67,12 @@ extension UIColor {
         return UIColor.init(red: red/255, green: green/255, blue: blue/255, alpha: alpha)
     }
 
+}
+
+extension UIColor {
+    static let text_Red_2 = colorFromHex("FF5C22")
+    static let LightTextColor = colorFromHex("919191")
+    static let button_main_color = rgbColor(red: 219, green: 163, blue: 16, alpha: 1.0)
+    static let text_gray_color = rgbColor(red: 144, green: 144, blue: 144, alpha: 1.0)
+    static let text_Color = rgbColor(red: 47, green: 47, blue: 47, alpha: 1)
 }

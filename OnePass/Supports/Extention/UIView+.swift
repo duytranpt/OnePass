@@ -49,68 +49,14 @@ extension UIView {
         layer.mask = mask
     }
     
-    var x: CGFloat {
-        get {
-            self.frame.origin.x
-        }
-        set {
-            self.frame.origin.x = newValue
-        }
-    }
-    
-    var y: CGFloat {
-        get {
-            self.frame.origin.y
-        }
-        set {
-            self.frame.origin.y = newValue
-        }
-    }
-    
-    var heightv: CGFloat {
-        get {
-            self.frame.size.height
-        }
-        set {
-            self.frame.size.height = newValue
-        }
-    }
-    
-    var widthv: CGFloat {
-        get {
-            self.frame.size.width
-        }
-        set {
-            self.frame.size.width = newValue
-        }
-    }
-    
-    var xRight: CGFloat {
-        get {
-            self.frame.origin.x + self.widthv
-        }
-        set {
-            self.x = newValue - self.widthv
-        }
-    }
-    
-    var yBottom: CGFloat {
-        get {
-            self.y + self.heightv
-        }
-        set {
-            self.y = yBottom - self.heightv
-        }
-    }
     
     @IBInspectable
     public var BGHexColor: String {
         set {
             self.backgroundColor = .colorFromHex(newValue)
         }
-        
         get {
-            return "hiha"
+            (self.backgroundColor?.hexStringFromColor(color: self.backgroundColor!))!
         }
     }
     
@@ -132,7 +78,7 @@ extension UIView {
     
     @IBInspectable var vCornerRadius: CGFloat {
         get {
-            return 1.0
+            return self.layer.cornerRadius
         } set {
             self.layer.cornerRadius = newValue
             self.layer.masksToBounds = true
@@ -173,17 +119,6 @@ extension UIView {
             self.layer.shadowOpacity = newValue
             self.layer.masksToBounds = false
         }
-    }
-    
-   
-    func fixInView(_ superView: UIView) {
-        self.translatesAutoresizingMaskIntoConstraints = false
-        superView.addSubview(self)
-        self.leadingAnchor.constraint(equalTo: superView.leadingAnchor).isActive = true
-        self.bottomAnchor.constraint(equalTo: superView.bottomAnchor).isActive = true
-        self.trailingAnchor.constraint(equalTo: superView.trailingAnchor).isActive = true
-        self.topAnchor.constraint(equalTo: superView.topAnchor).isActive = true
-        self.heightAnchor.constraint(equalToConstant: NavbarHeight().navbarHeight).isActive = true
     }
     
     func addAction(action: @escaping () -> Void) {
@@ -233,3 +168,116 @@ extension UIView {
 
 }
 
+extension UIView {
+    var x: CGFloat {
+        get {
+            self.frame.origin.x
+        }
+        set {
+            self.frame.origin.x = newValue
+        }
+    }
+    
+    var y: CGFloat {
+        get {
+            self.frame.origin.y
+        }
+        set {
+            self.frame.origin.y = newValue
+        }
+    }
+    
+    var width: CGFloat {
+        get {
+            self.frame.size.width
+        }
+        set {
+            self.frame.size.width = newValue
+        }
+    }
+    
+    var height: CGFloat {
+        get {
+            self.frame.size.height
+        }
+        set {
+            self.frame.size.height = newValue
+        }
+    }
+    
+    var xRight: CGFloat {
+        get {
+            self.frame.origin.x + self.width
+        }
+        set {
+            self.x = newValue - self.width
+        }
+    }
+    
+    var yBottom: CGFloat {
+        get {
+            self.y + self.height
+        }
+        set {
+            self.y = newValue - self.height
+        }
+    }
+    
+    var origin: CGPoint {
+        get {
+            self.frame.origin
+        }
+        set {
+            var r = frame
+            r.origin = newValue
+            frame = r
+        }
+    }
+    
+    var size: CGSize {
+        get {
+            self.frame.size
+        }
+        set {
+            var r = frame
+            r.size = newValue
+            frame = r
+        }
+    }
+    var centerY: CGFloat {
+        get {
+            self.center.y
+        }
+        set {
+            self.center = CGPoint(x: self.centerX, y: newValue)
+        }
+    }
+    
+    var centerX: CGFloat {
+        get {
+            self.center.x
+        }
+        set {
+            self.center = CGPoint(x: newValue, y: self.centerY)
+        }
+    }
+
+}
+
+extension UIView {
+    func addDashedBorder(lineWidth: CGFloat, color: UIColor) {
+      let shapeLayer:CAShapeLayer = CAShapeLayer()
+      let shapeRect = CGRect(x: 0, y: 0, width: self.width, height: self.height)
+      
+      shapeLayer.bounds = shapeRect
+      shapeLayer.position = CGPoint(x: self.width/2, y: self.height/2)
+      shapeLayer.fillColor = UIColor.clear.cgColor
+        shapeLayer.strokeColor = color.cgColor
+      shapeLayer.lineWidth = lineWidth
+      shapeLayer.lineJoin = CAShapeLayerLineJoin.round
+      shapeLayer.lineDashPattern = [6,3]
+      shapeLayer.path = UIBezierPath(roundedRect: shapeRect, cornerRadius: self.vCornerRadius).cgPath
+      
+      self.layer.addSublayer(shapeLayer)
+  }
+}

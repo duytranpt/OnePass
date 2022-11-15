@@ -18,13 +18,13 @@ class DashedLineView : UIView {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         let  path = UIBezierPath()
-        if height > width {
+        if heightV > widthV {
             let  p0 = CGPoint(x: self.bounds.midX, y: self.bounds.minY)
             path.move(to: p0)
 
             let  p1 = CGPoint(x: self.bounds.midX, y: self.bounds.maxY)
             path.addLine(to: p1)
-            path.lineWidth = width
+            path.lineWidth = widthV
 
         } else {
             let  p0 = CGPoint(x: self.bounds.minX, y: self.bounds.midY)
@@ -32,7 +32,7 @@ class DashedLineView : UIView {
 
             let  p1 = CGPoint(x: self.bounds.maxX, y: self.bounds.midY)
             path.addLine(to: p1)
-            path.lineWidth = height
+            path.lineWidth = heightV
         }
 
         let  dashes: [ CGFloat ] = [ perDashLength, spaceBetweenDash ]
@@ -43,11 +43,11 @@ class DashedLineView : UIView {
         path.stroke()
     }
 
-    private var width : CGFloat {
+    private var widthV : CGFloat {
         return self.bounds.width
     }
 
-    private var height : CGFloat {
+    private var heightV : CGFloat {
         return self.bounds.height
     }
 }

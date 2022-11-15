@@ -18,7 +18,7 @@ class OPBaseVC: UIViewController {
     }
     
     func setHeader(title: String, subTitle: String, Type: OPHeaderView.OPHEADERTYPE) {
-        navigationBarView = OPHeaderView(initHeaderView: title, subTitle: subTitle, type: Type, nav: self.navigationController, andFrame: CGRect(origin: .zero, size: CGSize(width: self.view.widthv, height: self.view.navbarHeight())))
+        navigationBarView = OPHeaderView(initHeaderView: title, subTitle: subTitle, type: Type, nav: self.navigationController, andFrame: CGRect(origin: .zero, size: CGSize(width: self.view.width, height: self.view.navbarHeight())))
         view.addSubview(navigationBarView!)
     }
     

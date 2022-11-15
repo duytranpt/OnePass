@@ -92,6 +92,29 @@ class OPButton: UIButton {
         setupButton()
     }
     
+    init(initConfirmBtn title: String, andFrame: CGRect) {
+        super.init(frame: andFrame)
+        cancelBtn(title: title, fontSize: 11)
+    }
+    
+    init(initCheckBoxBtn frame: CGRect) {
+        super.init(frame: frame)
+        self.isSelected = true
+        checkboxSelected(type: .CHECKBOX_IMG)
+        checkboxAction(type: .CHECKBOX_IMG)
+    }
+    
+    init(initCheckBoxRound frame: CGRect) {
+        super.init(frame: frame)
+        self.isSelected = true
+        checkboxSelected(type: .CHECKBOX_TYPE_ROUND)
+        checkboxAction(type: .CHECKBOX_TYPE_ROUND)
+    }
+    
+    init(initCheckBoxRoundImg frame: CGRect) {
+        super.init(frame: frame)
+        
+    }
     
     var imgView: UIImageView?
     
@@ -149,7 +172,7 @@ class OPButton: UIButton {
 
 
     func setupBtnPlus() {
-        self.cornerRadius = self.heightv / 2
+        self.cornerRadius = self.height / 2
         self.backgrColor = UIColor.colorFromHex("E6704E")
         self.setImage(UIImage(named: "icPlus"), for: .normal)
     }
@@ -158,6 +181,22 @@ class OPButton: UIButton {
         self.cornerRadius = 8
     }
     
+    func cancelBtn(title: String, fontSize: CGFloat) {
+        self.backgrColor = .white
+        self.boderWith = 1
+        self.boderWithColor = .cgRGB(rgb: "219 163 16")
+        self.vCornerRadius = 8
+        
+        let ButtonTitle = UILabel()
+        ButtonTitle.text = title
+        ButtonTitle.font = .fontMedium(size: fontSize)
+        ButtonTitle.textColor = .cgRGB(rgb: "219 163 16")
+        self.addSubview(ButtonTitle)
+        ButtonTitle.translatesAutoresizingMaskIntoConstraints = false
+        ButtonTitle.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        ButtonTitle.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        
+    }
     
     func cancelBtn(title: String) {
         self.backgrColor = .white
@@ -173,9 +212,6 @@ class OPButton: UIButton {
         ButtonTitle.translatesAutoresizingMaskIntoConstraints = false
         ButtonTitle.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         ButtonTitle.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-        
-        
-
     }
     
     func confirmBtn(title: String) {
@@ -232,7 +268,7 @@ class OPButton: UIButton {
             self.Title = ""
             self.backgrColor = .white
             self.cornerRadius = self.frame.height/2
-            self.boderWith = 7
+            self.boderWith = self.height / 3.4285714286
             self.boderWithColor = .rgbColor(red: 219, green: 163, blue: 16, alpha: 1)
         }
         
@@ -450,7 +486,7 @@ class OPButton: UIButton {
         imgView = UIImageView(frame: bounds)
         imgView!.contentMode = .center
         if isRight {
-            imgView = UIImageView(frame: CGRect(x: self.widthv - 32, y: self.heightv / 2 - 18 / 2, width: 18, height: 18))
+            imgView = UIImageView(frame: CGRect(x: self.width - 32, y: self.height / 2 - 18 / 2, width: 18, height: 18))
         }
         imgView?.isUserInteractionEnabled = false
         imgView!.image = UIImage(named: image ?? "")

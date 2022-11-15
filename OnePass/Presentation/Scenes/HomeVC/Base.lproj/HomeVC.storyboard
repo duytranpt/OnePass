@@ -117,13 +117,23 @@
                                             <constraint firstItem="i43-UB-vsv" firstAttribute="leading" secondItem="IJr-eb-xWn" secondAttribute="leading" constant="10" id="ygi-gT-FKw"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eH4-AQ-ane" customClass="OPHeaderView" customModule="OnePass" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" priority="250" constant="100" id="eld-6I-xwx"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="eH4-AQ-ane" secondAttribute="trailing" id="Rig-ZT-5tc"/>
                                     <constraint firstAttribute="top" secondItem="BWy-SS-ijC" secondAttribute="top" id="SGw-96-7L7"/>
                                     <constraint firstAttribute="height" constant="350" id="U07-Se-N2M"/>
                                     <constraint firstItem="IJr-eb-xWn" firstAttribute="leading" secondItem="BWy-SS-ijC" secondAttribute="leading" constant="15" id="d9Q-Eh-GP0"/>
                                     <constraint firstAttribute="trailing" secondItem="IJr-eb-xWn" secondAttribute="trailing" constant="15" id="e0x-Fe-Dfr"/>
+                                    <constraint firstItem="eH4-AQ-ane" firstAttribute="leading" secondItem="BWy-SS-ijC" secondAttribute="leading" id="eHy-do-RJ2"/>
+                                    <constraint firstItem="eH4-AQ-ane" firstAttribute="top" secondItem="BWy-SS-ijC" secondAttribute="top" id="iUf-ab-QGc"/>
                                     <constraint firstAttribute="bottom" secondItem="IJr-eb-xWn" secondAttribute="bottom" constant="15" id="ppo-VM-anR"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -131,27 +141,61 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U9V-3t-s7z">
-                                <rect key="frame" x="15" y="370" width="384" height="80"/>
+                                <rect key="frame" x="15" y="370" width="384" height="59"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="vS9-rS-B1V"/>
+                                    <constraint firstAttribute="height" constant="59" id="vS9-rS-B1V"/>
                                 </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xCc-qo-iHj" customClass="OPTextInputView" customModule="OnePass" customModuleProvider="target">
+                                <rect key="frame" x="15" y="437" width="384" height="59"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="h99-HH-LZ4"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s4B-ZS-7a7" customClass="DashedLineView" customModule="OnePass" customModuleProvider="target">
+                                <rect key="frame" x="15" y="516" width="384" height="2"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="MlL-UJ-AQu"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="perDashLength">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="spaceBetweenDash">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="dashColor">
+                                        <color key="value" systemColor="systemGray4Color"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemGray4Color"/>
                         <constraints>
                             <constraint firstItem="U9V-3t-s7z" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="FXY-5C-NSw"/>
+                            <constraint firstItem="xCc-qo-iHj" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="SUh-En-iXV"/>
                             <constraint firstItem="BWy-SS-ijC" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="UZz-h0-4sO"/>
+                            <constraint firstItem="s4B-ZS-7a7" firstAttribute="top" secondItem="xCc-qo-iHj" secondAttribute="bottom" constant="20" id="VJa-Pa-Jhr"/>
                             <constraint firstItem="BWy-SS-ijC" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Vn1-kD-qId"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="xCc-qo-iHj" secondAttribute="trailing" constant="15" id="Yce-lc-M7e"/>
+                            <constraint firstItem="s4B-ZS-7a7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="ZCj-Y9-mAR"/>
                             <constraint firstItem="BWy-SS-ijC" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="ir0-4n-rI8"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="s4B-ZS-7a7" secondAttribute="trailing" constant="15" id="pvN-VC-he1"/>
+                            <constraint firstItem="xCc-qo-iHj" firstAttribute="top" secondItem="U9V-3t-s7z" secondAttribute="bottom" constant="8" id="s7h-AV-QBd"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="U9V-3t-s7z" secondAttribute="trailing" constant="15" id="uhI-ab-W5Y"/>
                             <constraint firstItem="U9V-3t-s7z" firstAttribute="top" secondItem="BWy-SS-ijC" secondAttribute="bottom" constant="20" id="v3A-lf-anM"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btn1" destination="jAw-C1-gjP" id="r60-7l-JcY"/>
                         <outlet property="contentView" destination="IJr-eb-xWn" id="s92-ER-7U6"/>
+                        <outlet property="inputTextEmail" destination="xCc-qo-iHj" id="hc1-g0-20T"/>
                         <outlet property="mainView" destination="BWy-SS-ijC" id="0c1-cW-bpR"/>
+                        <outlet property="navi" destination="eH4-AQ-ane" id="U7A-cu-I2c"/>
                         <outlet property="newinputView" destination="U9V-3t-s7z" id="yoI-BY-46A"/>
                     </connections>
                 </viewController>
