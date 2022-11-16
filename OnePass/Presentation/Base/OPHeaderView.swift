@@ -79,8 +79,8 @@ class OPHeaderView: UIView {
         gradientView?.startPoint = CGPoint.zero
         gradientView?.endPoint = CGPoint(x: 1, y: 1)
         gradientView?.colors = [
-            UIColor.cgRGB(rgb: "45 103 130").cgColor,
-            UIColor.cgRGB(rgb: "2 57 91").cgColor
+            UIColor.red.cgColor,
+            UIColor.orange.cgColor
         ]
         self.layer.insertSublayer(gradientView!, at: 0)
     }
