@@ -12,5 +12,6 @@ class AddVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print("first commit: hiha")
     }
 }
