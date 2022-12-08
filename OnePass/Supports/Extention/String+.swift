@@ -5,7 +5,7 @@
 //  Created by Duy Tran on 20/10/2022.
 //
 
-import Foundation
+import UIKit
 
 extension String {
     
@@ -16,6 +16,11 @@ extension String {
     func localized(table: String? = nil, bundle: Bundle = .main, _ args: CVarArg...) -> String {
         return String(format: NSLocalizedString(self, tableName: table, bundle: bundle, value: self, comment: ""), args.first!)
     }
+    
+    func localized(table: NSString? = nil, bundle: Bundle = .main, _ args: CVarArg...) -> NSString {
+        return NSString(format: NSLocalizedString(self, tableName: table as String?, bundle: bundle, value: self, comment: "") as NSString, args.first!)
+    }
+
     
     func bo_dau_Tieng_Viet() -> String? {
         var vn = replacingOccurrences(of: "đ", with: "d")
@@ -74,3 +79,47 @@ public extension NSObject {
     
 }
 
+
+extension NSString {
+
+    func widthOfString(usingFont font: UIFont) -> CGFloat {
+        let fontAttributes = [NSAttributedString.Key.font: font]
+        let size = self.size(withAttributes: fontAttributes)
+        return size.width
+    }
+
+    func heightOfString(usingFont font: UIFont) -> CGFloat {
+        let fontAttributes = [NSAttributedString.Key.font: font]
+        let size = self.size(withAttributes: fontAttributes)
+        return size.height
+    }
+
+    func sizeOfString(usingFont font: UIFont, widthLimit: CGFloat) -> CGSize {
+        
+        let style = NSParagraphStyle.default
+        let attributes = [
+            NSAttributedString.Key.font: font,
+            NSAttributedString.Key.paragraphStyle: style
+        ]
+        
+        let attributedText = NSAttributedString(
+            string: self as String,
+            attributes: attributes)
+        
+        let rect = attributedText.boundingRect(with: CGSize(width: widthLimit, height: CGFloat.greatestFiniteMagnitude),
+                                               options: .usesLineFragmentOrigin,
+                                               context: nil)
+        
+        
+        return rect.size
+        
+    }
+    
+    func sizeOfString(string: String, constrainedToWidth width: Double) -> CGSize {
+        return NSString(string: string).boundingRect(
+            with: CGSize(width: width, height: .greatestFiniteMagnitude),
+            options: .usesLineFragmentOrigin,
+            attributes: [.font: self],
+            context: nil).size
+    }
+}

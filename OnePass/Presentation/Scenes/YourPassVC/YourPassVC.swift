@@ -24,16 +24,23 @@ class YourPassVC: OPBaseVC {
         tableView.sectionFooterHeight = 12
         tableView.backgroundColor = .clear
         tableView.register(UINib(nibName: "OPCell", bundle: .main), forCellReuseIdentifier: "OPCell")
-        
+        print("1")
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        dataModelPass = UserDefaults.getPassModel(userSessionKey: userSessionKey)!
+        super.viewWillAppear(animated)
+//        dataModelPass = UserDefaults.getPassModel(userSessionKey: userSessionKey)!
         tableView.reloadData()
         
         dataModelPass.sort { $0.dateCreate! > $1.dateCreate! }
-
+        print("2")
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("3")
+    }
+    
 
     @IBAction func getData(_ sender: Any) {
         UserDefaults.clearPassModel(userSessionKey: userSessionKey)

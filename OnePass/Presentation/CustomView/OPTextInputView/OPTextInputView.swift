@@ -15,6 +15,8 @@ class OPTextInputView: UIView {
         case INPUT_TYPE_EMAIL
         case INPUT_TYPE_PHONE
         case INPUT_TYPE_NUMBER
+        case INPUT_TYPE_EXPIRYDATE
+        case INPUT_TYPE_ISSUINGDATE
     }
     
     var titleLabel: UILabel?
@@ -250,12 +252,51 @@ extension OPTextInputView: UITextFieldDelegate {
             return false
         }
         
+        if typeInput == .INPUT_TYPE_EXPIRYDATE {
+            
+        }
         
         return true
     }
 }
 
 extension OPTextInputView {
+    
+    func validateIssuingDate(_ str: String) -> Bool {
+        if str.count > 0 {
+            
+        }
+        
+        if str.count > 1 {
+            let strNumber: String = (str as NSString).substring(to: 2)
+            if Int(strNumber) ?? 0 > 12 {
+                return false
+            }
+        }
+        
+        if str.count >= 4 {
+            let range = [str .components(separatedBy: "/")]
+            let yearNow = getYear()
+            let year = range[1]
+            
+            if year.count > 0 {
+                let yearNumber: String = (year[0] as NSString).substring(to: 1)
+                if  Int(yearNumber)! > yearNow/10  {
+                    return false
+                }
+            }
+            
+            if year.count > 1 {
+                let yearNumber: String = (year[0] as NSString).substring(to: 2)
+                if  Int(yearNumber)! > yearNow || Int(yearNumber)! < yearNow - 31 {
+                    return false
+                }
+
+            }
+        }
+        
+        return true
+    }
     
     func disagreeChar(_ str: String, type: InputType) -> String {
         let unfilteredString = bo_dau_Tieng_Viet(str)
@@ -269,10 +310,13 @@ extension OPTextInputView {
             
         notAllowedChars = CharacterSet(charactersIn: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890_.-@").inverted
             
-            
         case .INPUT_TYPE_PHONE:
             break
         case .INPUT_TYPE_NUMBER:
+            break
+        case .INPUT_TYPE_EXPIRYDATE:
+            break
+        case .INPUT_TYPE_ISSUINGDATE:
             break
         }
         
@@ -320,5 +364,10 @@ extension OPTextInputView {
     
     func setPlaceholder(_ Placeholder: String!) {
         self.vTextField!.attributedPlaceholder = NSAttributedString(string: "\(Placeholder!)",attributes: [NSAttributedString.Key.foregroundColor: UIColor.cgRGB(rgb: "234 234 234")])
+    }
+    
+    func getYear() -> Int {
+        let year = Calendar.current.component(.year, from: Date())
+        return year % 100
     }
 }

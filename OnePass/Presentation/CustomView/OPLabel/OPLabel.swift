@@ -21,7 +21,7 @@ class OPLabel: UILabel {
         self.attributedText = setupText(fullString: fullString, boldPartOfString: boldPartOfString, font: font, boldFont: boldFont, color: color, underLine: underLine)
     }
     
-    func setupText(fullString: NSString, boldPartOfString: [NSString], font: UIFont, boldFont: UIFont, color: UIColor, underLine: Bool) -> NSAttributedString {
+    private func setupText(fullString: NSString, boldPartOfString: [NSString], font: UIFont, boldFont: UIFont, color: UIColor, underLine: Bool) -> NSAttributedString {
         
         let nonBoldFontAttribute = [NSAttributedString.Key.font:font]
         let boldString = NSMutableAttributedString(string: fullString as String, attributes:nonBoldFontAttribute)
@@ -51,9 +51,7 @@ class OPLabel: UILabel {
                 if recognizer.didTapAttributedTextInLabel(label: self, inRange: termsRange) {
                     action(index)
                     break
-                } else {
-                    print("Tapped none")
-                }
+                } 
             }
             
         }

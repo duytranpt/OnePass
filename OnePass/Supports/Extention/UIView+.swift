@@ -62,7 +62,7 @@ extension UIView {
     
     @IBInspectable var borderWidth: CGFloat {
         get {
-            return 1.0
+            return self.borderWidth
         } set {
             self.layer.borderWidth = newValue
         }
@@ -280,4 +280,18 @@ extension UIView {
       
       self.layer.addSublayer(shapeLayer)
   }
+}
+
+extension UIView {
+    // Remove all subview
+    func removeAllSubviews() {
+        subviews.forEach { $0.removeFromSuperview() }
+    }
+    
+    // Remove all subview with specific type
+    func removeAllSubviews<T: UIView>(type: T.Type) {
+        subviews
+            .filter { $0.isMember(of: type) }
+            .forEach { $0.removeFromSuperview() }
+    }
 }

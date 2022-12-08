@@ -122,8 +122,8 @@
             filePath = "OnePass/Presentation/Scenes/YourPassVC/YourPassVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "numberOfSections(in:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -154,8 +154,8 @@
             filePath = "OnePass/Presentation/Base/OPBaseVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "checkNil(data:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -170,8 +170,8 @@
             filePath = "OnePass/Presentation/Base/OPBaseVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
             landmarkName = "checkNil(data:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -195,22 +195,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "ED0060BB-2BBD-463A-BC2B-367E95C80401"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OnePass/Presentation/Scenes/HomeVC/HomeVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "addAction(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "4567FAE7-1F78-43FC-A48A-359B47E9F42E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -218,8 +202,8 @@
             filePath = "OnePass/Presentation/CustomView/OPTextInputView/OPTextInputView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "208"
-            endingLineNumber = "208"
+            startingLineNumber = "210"
+            endingLineNumber = "210"
             landmarkName = "setUpView(title:andType:andIsRequired:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -234,8 +218,8 @@
             filePath = "OnePass/Presentation/CustomView/OPTextInputView/OPTextInputView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "210"
-            endingLineNumber = "210"
+            startingLineNumber = "212"
+            endingLineNumber = "212"
             landmarkName = "setUpView(title:andType:andIsRequired:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -254,6 +238,54 @@
             endingLineNumber = "243"
             landmarkName = "size"
             landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2E933A8D-CDC0-49D7-935E-6D078A80F0C4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OnePass/Presentation/Base/StateView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "init?(initStateNumber:numberOfState:navC:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "65272D78-08DB-4B6F-85C9-5282ECB780D2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OnePass/Presentation/Scenes/HomeVC/HomeVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
+            landmarkName = "HomeVC"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C43B3ED3-3FE8-4EFA-983A-305B2226DA0B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OnePass/Presentation/Scenes/HomeVC/HomeVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
+            landmarkName = "HomeVC"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

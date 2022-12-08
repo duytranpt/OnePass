@@ -68,10 +68,11 @@ class OPHeaderView: UIView {
         self.addSubview(titleLabel!)
         self.addSubview(subTitleLabel!)
         self.addSubview(backButton!)
-        self.addSubview(rightButton!)
+//        self.addSubview(rightButton!)
         self.addSubview(imgBongSen!)
         backButton?.addAction {
             self.navC?.popViewController(animated: true)
+            print("PopVC")
         }
         
         gradientView = CAGradientLayer()
@@ -100,9 +101,9 @@ class OPHeaderView: UIView {
         self.titleLabel?.text = title
     }
     
-    func showRightButton(_ icon: String, action: @escaping () -> Void) {
+    func showRightButton(action: @escaping () -> Void) {
         self.addSubview(rightButton!)
-        rightButton?.imgView?.image = UIImage(named: icon)
+        rightButton?.imgView?.image = UIImage(named: "icLogout")
         rightButton?.addAction {
             action()
         }
@@ -114,4 +115,26 @@ class OPHeaderView: UIView {
             self.gradientView = nil
         }
     }
+    
+    func addCustomView(_ viewMore: UIView) {
+        viewMore.y = self.height
+        viewMore.alpha = 1;
+        self.frame = CGRect(x: 0, y: 0, width: self.width, height: self.height + viewMore.height)
+        self.imgBongSen?.frame = CGRect(x: 0, y: self.height - self.height*89/100, width: self.height*131/100, height: self.height*89/100)
+        self.addSubview(viewMore)
+        if gradientView != nil {
+            gradientView?.frame = self.frame
+        }
+    }
+    
+    func showRightButtonWithImg(img: String, _ callback: @escaping () -> Void) {
+        self.addSubview(rightButton!)
+        rightButton?.imgView?.frame = rightButton!.bounds
+        rightButton?.imgView?.image = UIImage(named: img)
+        rightButton?.addAction {
+            callback()
+        }
+        
+    }
+    
 }

@@ -64,8 +64,10 @@ class OPButton: UIButton {
         }
     }
 
-    
+    let text_Blue: UIColor = .colorFromHex("006885")
     var type: OPButtonType = .CANCEL_TYPE
+    var imgStepView: UIImageView?
+    var circleView: UIView?
     
     @IBInspectable
      var TypeBtn: Int = 0 {
@@ -111,9 +113,44 @@ class OPButton: UIButton {
         checkboxAction(type: .CHECKBOX_TYPE_ROUND)
     }
     
-    init(initCheckBoxRoundImg frame: CGRect) {
-        super.init(frame: frame)
+    init(initCircleButton title: String, size: CGFloat) {
+        super.init(frame: CGRect(x: 0, y: 0, width: size, height: size))
+        self.backgrColor = .clear
         
+        circleView = UIView(frame: CGRect(x: size/6, y: size/6, width: 2*size/3, height: 2*size/3))
+        circleView!.isUserInteractionEnabled = false
+        self.addSubview(circleView!)
+    
+        let imgName = "icListflightStep\(title)"
+        imgStepView = UIImageView(image: UIImage(named: imgName))
+        imgStepView!.center = circleView!.center
+        imgStepView!.isUserInteractionEnabled = false
+        self.addSubview(imgStepView!)
+        
+        circleView!.layer.masksToBounds = true
+        circleView!.layer.cornerRadius = circleView!.height/2
+        circleView!.layer.borderWidth = 1
+        circleView!.layer.borderColor = UIColor.white.cgColor
+    }
+    
+    func setStateButtonDark(state: Int) {
+        switch (state) {
+        case -1:
+            self.imgStepView!.tintColor = text_Blue
+            self.circleView?.backgroundColor = .white
+            self.circleView!.layer.borderColor = UIColor.white.cgColor
+            self.alpha = 1
+        case 1:
+            self.imgStepView!.tintColor = .gray
+            self.circleView?.backgroundColor = .clear
+            self.circleView!.layer.borderColor = UIColor.gray.cgColor
+            self.alpha = 0.5
+        default:
+            self.imgStepView!.tintColor = text_Blue
+            self.circleView?.backgroundColor = .clear
+            self.circleView!.layer.borderColor = text_Blue.cgColor
+            self.alpha = 1
+        }
     }
     
     var imgView: UIImageView?
@@ -273,11 +310,11 @@ class OPButton: UIButton {
         }
         
         if type == .CHECKBOX_IMG {
+            self.setImage(UIImage(named: "path2"), for: .normal)
             self.Title = ""
             self.backgrColor = .rgbColor(red: 219, green: 163, blue: 16, alpha: 1)
             self.cornerRadius = 6
             self.boderWith = 0
-            self.setImage(UIImage(named: "path2"), for: .normal)
         }
         
     }
@@ -293,12 +330,12 @@ class OPButton: UIButton {
         }
         
         if type == .CHECKBOX_IMG {
+            self.setImage(nil, for: .normal)
             self.Title = ""
             self.backgrColor = .clear
             self.cornerRadius = 6
             self.boderWithColor = .cgRGB(rgb: "155 155 155")
             self.boderWith = 1
-            self.setImage(nil, for: .normal)
         }
 
         
@@ -510,4 +547,6 @@ class OPButton: UIButton {
         
         layer.add(shake, forKey: "position")
     }
+    
+
 }

@@ -8,7 +8,7 @@
 import Foundation
 
 extension Date {
-    static func dateFromString(from string: String?, withFormat format: String?) -> Date? {
+    static func dateFromStringg(from string: String?, withFormat format: String?) -> Date? {
         let formatter = DateFormatter()
         formatter.calendar = Calendar(identifier: .gregorian)
         formatter.locale = NSLocale(localeIdentifier: "en_US_POSIX") as Locale
@@ -26,7 +26,6 @@ extension Date {
         return date
     }
     
-    @available(iOS 15, *)
     static func dateFromString(_ date: String?, withFormat format: String?)-> Date? {
         let isoDate = date
         
@@ -36,7 +35,7 @@ extension Date {
         let date = dateFormatter.date(from:isoDate ?? "")
         
         let calendar = Calendar.current
-        let components = calendar.dateComponents([.year, .month, .day, .hour], from: date ?? Date.now)
+        let components = calendar.dateComponents([.year, .month, .day, .hour], from: date ?? Date())
         
         let finalDate = calendar.date(from:components)
         

@@ -26,6 +26,38 @@ class OPBaseVC: UIViewController {
         navigationBarView?.rightButton?.isHidden = true
         navigationBarView?.backButton?.isHidden = true
     }
+    
+    func setBackAction(_ callback: @escaping () -> Void) {
+        if (navigationBarView != nil) {
+            navigationBarView!.backButton?.removeTarget(
+                nil,
+                action: nil,
+                for: .allEvents)
+            navigationBarView!.backButton?.addAction {
+                callback()
+            }
+        }
+    }
+    
+    func backtoViewController(parentVC: UIViewController) {
+        if parentVC == nil {
+            self.navigationController?.popToRootViewController(animated: true)
+        } else {
+            self.navigationController?.popToViewController(parentVC, animated: true)
+        }
+    }
+    
+    func showRightButton(_ callback: @escaping () -> Void) {
+        self.navigationBarView?.showRightButton(action: {
+            callback()
+        })
+    }
+    
+    func showRightButtonWithImg(img: String, _ callback: @escaping () -> Void) {
+        self.navigationBarView?.showRightButtonWithImg(img: img, {
+            callback()
+        })
+    }
 }
 
 extension  OPBaseVC {
@@ -82,11 +114,11 @@ extension OPBaseVC {
     }
 }
 
-
-extension Array where Element: Equatable{
-    mutating func remove(element: Element) {
-        if let i = self.firstIndex(of: element) {
-            self.remove(at: i)
-        }
+extension OPBaseVC {
+    func openWebView(_ url: String) {
+        guard let url = URL(string: url) else { return }
+        UIApplication.shared.open(url)
     }
+    
 }
+   

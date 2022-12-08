@@ -39,3 +39,35 @@ extension PassModel: Equatable {
     }
 }
 
+
+struct newModel {
+    var id: String?
+    var dateCreate: Int64?
+    var app: String?
+    var passWord: String?
+        
+    init(id: String, dateCreate: Int64, app: String, passWord: String) {
+        self.id = id
+        self.dateCreate = dateCreate
+        self.app = app
+        self.passWord = passWord
+    }
+    
+//    func saveData(objc: [newModel]) {
+//        do {
+//            try JSONSerialization.save(jsonObject: objc, toFilename: "newdata")
+//        } catch {
+//            print("error")
+//        }
+//    }
+//    
+//    func loadData() throws -> Any?{
+//        do {
+//            return try JSONSerialization.loadJSON(withFilename: "newdata")
+//
+//        } catch {
+//            print("error")
+//        }
+//        return nil
+//    }
+}
