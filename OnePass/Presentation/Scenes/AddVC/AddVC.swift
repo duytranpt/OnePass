@@ -13,5 +13,7 @@ class AddVC: UIViewController {
         super.viewDidLoad()
 
         print("first commit: hiha")
+        
+        print("second commit: huhu")
     }
 }
